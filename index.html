@@ -29,7 +29,7 @@
         ></script>
         <div id="viewer" style="width: 100vw; height: 100vh"></div>
         <script type="text/template" id="a1">
-            <div class='alert alert-primary'>Object1 Title</div>
+            <div class='title'>Object1 Title</div>
             <div>
                 Object1 Desc.
                 <a href="vr1.html" target="_blank">GO TO IN ON AT BUILDING</a>
@@ -37,7 +37,7 @@
         </script>
 
         <script type="text/template" id="a2">
-            <div class='alert alert-primary'>Object2 Title</div>
+            <div class='title'>Object2 Title</div>
             <div>
                 Object1 Desc.
                 <a href="vr2.html" target="_blank">GO TO IN ON AT หลังตึก</a>
@@ -45,7 +45,7 @@
         </script>
 
         <script type="text/template" id="a3">
-            <div class='alert alert-primary'>Object3 Title</div>
+            <div class='title'>Object3 Title</div>
             <div>
                 Object3 Desc.
                 <a href="vr3.html" target="_blank">GO TO IN ON AT โรงมานุส</a>
@@ -53,7 +53,7 @@
         </script>
 
         <script type="text/template" id="a4">
-            <div class='alert alert-primary'>Object4 Title</div>
+            <div class='title'>Object4 Title</div>
             <div>
                 Object4 Desc.
                 <a href="vr4.html" target="_blank">GO TO IN ON AT ไปหน้าตึกคือเก่า</a>
@@ -65,6 +65,8 @@
                 container: document.querySelector("#viewer"),
                 panorama: "images/panorama/main.jpeg",
                 useXmpData: false,
+                fisheye: true,
+                defaultYaw: "15deg",
                 plugins: [
                     [
                         PhotoSphereViewer.MarkersPlugin,
@@ -72,50 +74,50 @@
                             markers: [
                                 {
                                     id: "m1",
-                                    position: { yaw: "-30deg", pitch: "0deg" },
-                                    html: "<div class='alert alert-primary'>ไปไสกะไป (ไปในตึก)</div>",
+                                    position: { yaw: "0deg", pitch: "40deg" },
+                                    html: "<div class='box'><img src='./images/objects/location.png' alt=''>ไปยังภายในตึกวิทยวิภาศ</div>",
                                     size: {
-                                        width: 300,
-                                        height: 300,
+                                        width: 0,
+                                        height: 0,
                                     },
-                                    tooltip:
-                                        "<div class='alert alert-primary'>ไปไสกะไป (ไปในตึก)</div>",
+                                    // tooltip:
+                                    //     "<div class='alert alert-primary'>ไปไสกะไป (ไปในตึก)</div>",
                                     content:
                                         document.getElementById("a1").innerHTML,
                                 },
                                 {
                                     id: "m2",
-                                    position: { yaw: "-60deg", pitch: "0deg" },
-                                    html: "<div class='alert alert-primary'>ไปไสกะไป (ไปหลังตึก)</div>",
+                                    position: { yaw: "0deg", pitch: "30deg" },
+                                    html: "<div class='box'><img src='./images/objects/location.png' alt=''>ไปยังกลางตึกวิทยวิภาศ</div>",
                                     size: {
-                                        width: 300,
-                                        height: 300,
+                                        width: 0,
+                                        height: 0,
                                     },
-                                    tooltip:
-                                        "<div class='alert alert-primary'>ไปไสกะไป (ไปหลังตึก)</div>",
+                                    // tooltip:
+                                    //     "<div class='alert alert-primary'>ไปไสกะไป (ไปหลังตึก)</div>",
                                     content:
                                         document.getElementById("a2").innerHTML,
                                 },
                                 {
                                     id: "m3",
-                                    position: { yaw: "180deg", pitch: "0deg" },
-                                    html: "<div class='alert alert-primary'>ไปไสกะไป (ไปโรงหมานุด)</div>",
-                                    size: { width: 300, height: 300 },
-                                    tooltip:
-                                        "<div class='alert alert-primary'>ไปไสกะไป (ไปโรงหมานุด)</div>",
+                                    position: { yaw: "0deg", pitch: "20deg" },
+                                    html: "<div class='box'><img src='./images/objects/location.png' alt=''>ไปยังโรงอาหารคณะมนุษย์ศาสตร์</div>",
+                                    size: { width: 0, height: 0 },
+                                    // tooltip:
+                                    //     "<div class='alert alert-primary'>ไปไสกะไป (ไปโรงหมานุด)</div>",
                                     content:
                                         document.getElementById("a3").innerHTML,
                                 },
                                 {
                                     id: "m4",
-                                    position: { yaw: "115deg", pitch: "10deg" },
-                                    html: "<div class='alert alert-primary'>ไปไสกะไป (ไปหน้าตึกคือเก่า)</div>",
+                                    position: { yaw: "0deg", pitch: "10deg" },
+                                    html: "<div class='box'><img src='./images/objects/location.png' alt=''>ไปยังหน้าตึกวิทยวิภาศ</div>",
                                     size: {
-                                        width: 300,
-                                        height: 300,
+                                        width: 0,
+                                        height: 0,
                                     },
-                                    tooltip:
-                                        "<div class='alert alert-primary'>ไปไสกะไป (ไปหน้าตึกคือเก่า)</div>",
+                                    // tooltip:
+                                    //     "<div class='alert alert-primary'>ไปไสกะไป (ไปหน้าตึกคือเก่า)</div>",
                                     content:
                                         document.getElementById("a4").innerHTML,
                                 },

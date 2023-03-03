@@ -1,77 +1,67 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css">
-    </head>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
+			/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.css"
+			/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+			/>
+		<link rel="stylesheet" href="style.css">
+	</head>
 
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"
-        ></script>
-        <!-- the viewer container must have a defined size -->
-        <div id="viewer" style="width: 100vw; height: 100vh"></div>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"></script>
+		<!-- the viewer container must have a defined size -->
+		<div id="viewer" style="width: 100vw; height: 100vh"></div>
 
-        <script type="text/template" id="a1">
-            <div class='alert alert-primary'>นี่หละบักเวฟ</div>
+
+		<script type="text/template" id="a2">
+            <div class='alert alert-primary'>คณะ KKBS</div>
             
             <div>
-                นายถิรวัฒน์ พงษ์สิมา ชายผู้น่าสงสารขาดนารีอุปถัมภ์ผิดหวังกับความรักซ้ำๆจนใจเจ็บ
+                คณะสำหรับสาวๆสวยๆของมหาวิทยาลัยขอนแก่น
             </div>
         </script>
-
-        <script type="text/template" id="a2">
-            <div class='alert alert-primary'>คณะKKBS</div>
-            
-            <div>
-                คณะ สำหรับสาวๆสวยๆของมหาวิทยาลัยขอนแก่น
-            </div>
-        </script>
-
-        <script type="text/template" id="a3">
+		<script type="text/template" id="a3">
             <div class='alert alert-primary'>ร้านคาเฟสู่แกรนไลน์</div>
             
             <div>
-                ร้านคาเฟ สำหรับคนรักกาตูนชื่อดังอย่างวันพีช
+                ร้านคาเฟ สำหรับคนรักการ์ตูนชื่อดังอย่างวันพีช
             </div>
         </script>
-
-        <script type="text/template" id="a4">
+		<script type="text/template" id="a4">
             <div class='alert alert-primary'>ต้นประดู่สายฟ้าฟาด</div>
             
             <div>
                 ต้นประดู่สายฟ้าฟาด
             </div>
         </script>
-
-        <script type="text/template" id="a5">
+		<script type="text/template" id="a5">
             <div class='alert alert-primary'>บันได ทางขึ้นไปตึกคณะวิทยาศาสตร์</div>
             
             <div>
                 บันไดสำหรับขึ้นไป ตึกคณะวิทยาศาสตร์ อยู่บริเวณหน้าตึก
             </div>
         </script>
-
-        <script>
+		<script>
             const viewer = new PhotoSphereViewer.Viewer({
                 container: document.querySelector("#viewer"),
                 panorama: "images/panorama/vr4.jpeg",
@@ -81,20 +71,6 @@
                         PhotoSphereViewer.MarkersPlugin,
                         {
                             markers: [
-                                {
-                                    id: "m1",
-                                    position: { yaw: "-28deg", pitch: "-5deg" },
-                                    // imageLayer: "images/objects/undefine.png",
-                                    html: "<div class='object'><div class='inObj'></div></div>",
-                                    size: {
-                                        width: 100,
-                                        height: 100,
-                                    },
-                                    tooltip:
-                                        "<div class='alert alert-primary'>นี่หละบักเวฟ</div>",
-                                    content:
-                                        document.getElementById("a1").innerHTML,
-                                },
                                 {
                                     id: "m2",
                                     position: { yaw: "-60deg", pitch: "0deg" },
@@ -157,5 +133,5 @@
                 ],
             });
         </script>
-    </body>
+	</body>
 </html>

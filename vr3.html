@@ -1,77 +1,73 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css">
-    </head>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
+			/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.css"
+			/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+			/>
+		<link rel="stylesheet" href="style.css">
+	</head>
 
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"
-        ></script>
-        <!-- the viewer container must have a defined size -->
-        <div id="viewer" style="width: 100vw; height: 100vh"></div>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin/index.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"></script>
+		<!-- the viewer container must have a defined size -->
+		<div id="viewer" style="width: 100vw; height: 100vh"></div>
 
-        <script type="text/template" id="a1">
+		<script type="text/template" id="a1">
             <div class='alert alert-primary'>พัดลม</div>
             
             <div>
-                พัดลม เป่าวันนีเย็นพรุ่งนี้ 
+                พัดลม เป่าวันนี้เย็นพรุ่งนี้ 
             </div>
         </script>
-
-        <script type="text/template" id="a2">
+		<script type="text/template" id="a2">
             <div class='alert alert-primary'>ร้านผมไม้ปั่น</div>
             
             <div>
-                ร้านผมไม้ปั่น ใครมีมะกรูดมาแลกมะนาว
+                ร้านผลไม้ปั่น ใครมีมะกรูดมาแลกมะนาว
             </div>
         </script>
-
-        <script type="text/template" id="a3">
+		<script type="text/template" id="a3">
             <div class='alert alert-primary'>ร้านอาหารตามสั่ง</div>
             
             <div>
                 ร้านอาหารตามสั่ง ราคาถูกเป็นมิตรกับนักศึกษา
             </div>
         </script>
-
-        <script type="text/template" id="a4">
+		<script type="text/template" id="a4">
             <div class='alert alert-primary'>ร้านชานมไข่มุก</div>
             
             <div>
                 ร้านชานมที่อร่อยราคาถูกกันนักศึกษา กินวันนี้ตัดขาวันหน้า
             </div>
         </script>
-
-        <script type="text/template" id="a5">
+		<script type="text/template" id="a5">
             <div class='alert alert-primary'>ร้านก๋วยเตี๋ยว</div>
             
             <div>
-                ก๋วยเตี๋ยว กินที่ปาก ลำบาทที่ไหน
+                ก๋วยเตี๋ยว กินที่ปาก ลำบากที่ไหน
             </div>
         </script>
-
-        <script>
+		<script>
             const viewer = new PhotoSphereViewer.Viewer({
                 container: document.querySelector("#viewer"),
                 panorama: "images/panorama/vr3.jpeg",
@@ -157,5 +153,5 @@
                 ],
             });
         </script>
-    </body>
+	</body>
 </html>
